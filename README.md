@@ -32,3 +32,9 @@
     - ```const newPackage = require("thisIsMyPackage");```
 12. run the different functions of the package
     - ```console.log(newPackage.packageFunction());```
+
+### Adding a .gitignore
+13. add a ```.gitignore``` file
+    - ```touch .gitignore```
+14. add text to help ignore package folders and content
+    - ```node_modules```
