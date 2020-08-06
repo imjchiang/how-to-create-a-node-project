@@ -61,15 +61,30 @@
     ```javascript
     app.get("/animals", function(req, res)
     {
-        res.send("This is a page about animals);
+        res.send("This is a page about animals");
     });
     ```
 
 ### Views
-
+21. create views folder in main directory
+    - ```mkdir views```
+22. create boilerplate html files in views directory
+    - ```touch views/index.html```
+23. insert whatever content you want in the html files
+24. change method of sending files in index.js
+    - ```res.sendFile(__dirname + "/views/index.html");```
 
 ### Templates
-
+25. install ejs
+    - ```npm i ejs```
+26. use ejs as view engine
+    - ```app.set("view engine", "ejs");```
+27. change html files in views to ejs type
+28. use render instead of sendFile
+    - ```res.render("index");```
+29. OPTIONAL: add variables to be implemented in your ejs document through the calling of render
+    - ```res.render("index", {name: "potatoes", num: 35});```
+    - ```<h1>You have <%= num %> <%= name %> in your salad!</h1>```
 
 ### Layouts
 
