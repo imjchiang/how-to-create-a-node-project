@@ -87,7 +87,39 @@
     - ```<h1>You have <%= num %> <%= name %> in your salad!</h1>```
 
 ### Layouts
-
+30. install express-ejs-layouts
+    - ```npm i express-ejs-layouts```
+31. set up ejs layouts
+    - ```const ejsLayouts = require("express-ejs-layouts");```
+    - ```app.use(ejsLayouts);```
+32. create a layout.ejs in views directory
+    - ```touch views/layout.ejs```
+33. set up layout.ejs: add <%- body %> tag in body
+    - ```<%- body %>```
+34. create a home.ejs in views directory
+    - ```touch views/home.ejs```
+35. create home route in index.js
+    ```javascript
+    app.get("/", function(req, res) 
+    {
+        res.render("home");
+    });
+    ```
+36. add other routes in index.js
+    ```javascript
+    app.get("/animals", function(req, res) 
+    {
+        res.render("animals", {title: "Favorite Animals", animals: ["sand crab", "corny joke dog"]})
+    });
+    ```
+37. OPTIONAL: add navigation in layout.ejs
+    ```javascript
+    <ul>
+        <li><a href='/foods'>Favorite Foods</a></li>
+        <li><a href='/animals'>Favorite Animals</a></li>
+    </ul>
+    <%- body %>
+    ```
 
 ### Controllers
 
