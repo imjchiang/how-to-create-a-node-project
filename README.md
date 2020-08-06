@@ -38,3 +38,41 @@
     - ```touch .gitignore```
 14. add text to help ignore package folders and content
     - ```node_modules```
+
+### Adding express to a node app
+15. install express
+    - ```npm i express```
+16. initialize express in ```index.js```
+    - ```const express = require("express");```
+17. initialize the app in ```index.js```
+    - ```const app = express();```
+
+### Express routes
+18. add a listener for the specific local port you want
+    - ```app.listen(8000, function() {console.log("Listening to port 8000");});```
+19. initialize the home page
+    ```javascript
+    app.get("/", function(req, res)
+    {
+        res.send("This is the home page");
+    });
+    ```
+20. add on other pages with other paths
+    ```javascript
+    app.get("/animals", function(req, res)
+    {
+        res.render("animals", {title: "Favorite Animals", animals:["sand crab", "pufferfish"]});
+    });
+
+### Views
+
+
+### Templates
+
+
+### Layouts
+
+
+### Controllers
+
+
