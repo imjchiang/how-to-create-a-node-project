@@ -61,8 +61,9 @@
     ```javascript
     app.get("/animals", function(req, res)
     {
-        res.render("animals", {title: "Favorite Animals", animals:["sand crab", "pufferfish"]});
+        res.send("This is a page about animals);
     });
+    ```
 
 ### Views
 
