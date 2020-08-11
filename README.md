@@ -122,5 +122,33 @@
     ```
 
 ### Controllers
+38. create a controllers folder in your root directory
+    - ```mkdir controllers```
+39. place all your routes besides your home route in the controller folder
+40. set up express and the router in the file containing the other routes in the controllers folder
+    ```javascript
+    const express = require("express");
+    const router = express.Router();
+
+    ...
+
+    module.exports = router;
+    ```
+41. use router for the routes that are in controller files
+    ```javascript
+    router.get("/foods", function(req, res)
+    {
+        res.render("faves/foods", {title: "Favorite Foods", foods: ["potatoes", "yams", "steak"]});
+    });
+    ```
+42. go back to the entry file and add middleware for routes
+    - ```app.use('/faves', require('./controllers/faves'));```
 
 
+
+
+createdb -U imjchiang pokedex
+
+sequelize model:create --name pokemon --attributes name:string
+
+sequelize db:migrate
